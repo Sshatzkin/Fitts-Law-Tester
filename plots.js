@@ -148,12 +148,34 @@ var trace2 = {
 var layout = {
   xaxis: {
     range: [0.8, 7.2],
-    text: "ID"
+    title: {
+      text: 'ID',
+      font: {
+        family: 'Courier New, monospace',
+        size: 24,
+        color: '#000000'
+      }
+    },
   },
   yaxis: {
-    range: [0, 1800]
+    range: [0, 1800],
+    title: {
+      text: "Time (ms)",
+      font: {
+        family: 'Courier New, monospace',
+        size: 24,
+        color: '#000000'
+      }
+    }
   },
-  title: "Fitts' Law Tests",
+  title: {
+    text: "Fitts' Law Tests",
+    font: {
+      family: 'Courier New, monospace',
+      size: 30,
+      color: '#000000'
+    }
+  },
   staticPlot: true
 };
 
@@ -173,19 +195,27 @@ var trace1 = {
 	type: 'scatter3d'
 };
 
-var layout = 
-{margin: {
-	l: 0,
-	r: 0,
-	b: 0,
-	t: 0
+var layout3D = 
+{title: {
+  text: "3D Fitts Law Plot",
+  font: {
+    family: 'Courier New, monospace',
+    size: 30,
+    color: '#000000'
+  }
   },
   xaxis: {
-    type: 'log',
-    autorange: true
+    range: [0.8, 7.2],
+    title: {
+      text: 'ID',
+      font: {
+        family: 'Courier New, monospace',
+        size: 24,
+        color: '#000000'
+      }
+    },
   },
   yaxis: {
-    type: 'log',
-    autorange: true
+    title: "Time"
   },};
-Plotly.newPlot('3D', [trace1], layout);
+Plotly.newPlot('3D', [trace1], layout3D);
